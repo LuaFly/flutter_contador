@@ -18,10 +18,10 @@ class _HomeState extends State<Home> {
     setState(() {
       _cat +=delta;
 
-      if(_cat <= 0 ){
-        _infoText = "Você odeia gatos";
+      if(_cat < 0 ){
+        _infoText = "Você não gosta de gatos";
       }
-      else if (_cat >0 && _cat <4){
+      else if (_cat >=0 && _cat <4){
         _infoText= "Você gosta de gatos";
       }
       else{
@@ -47,8 +47,8 @@ class _HomeState extends State<Home> {
             //childre: quantos filhos quiser
             Text(
               "Gatos: $_cat",
-              style: TextStyle(
-                  color: Colors.greenAccent, fontWeight: FontWeight.bold),
+              style: TextStyle(color: Colors.greenAccent, fontSize: 25.0, fontWeight: FontWeight.bold),
+
             ),
             Row(
               mainAxisAlignment:
